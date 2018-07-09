@@ -32,5 +32,15 @@ bot.on('message', (msg) =>{
 
 /**
 http.createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
-    res.end('Hello world!');
-*/
+    res.end('Hello, world!');
+	*/
+	
+	
+
+var server = http.createServer(function(req, res){
+	res.writeHead(200, {"Content-type":"Text/html"});
+	res.end('<center><h1>Hello World</h1></center>');
+});
+
+server.listen(process.env.PORT, function(){console.log('Server is running')});
+	
