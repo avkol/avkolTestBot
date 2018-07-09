@@ -18,7 +18,7 @@ bot.sendMessage(msg.chat.id, "Welcome");
 
 bot.on('message', (msg) =>{
 	
-	if (msg.text == '\start'){
+	if (msg.text == "\start"){
 	bot.sendMessage(msg.chat.id, `Здравствуйте, ${msg.from.first_name}! Рад Вас приветствовать! \n Позвольте представиться, я - бот-испытатель, \n 
 	моя задача состоит в том, чтобы тестировать функции бота в телеграме. `)
 	}
