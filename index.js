@@ -9,12 +9,13 @@ const token = '572769275:AAEmfiIr-opFqke6s1q-6XlSxCdPbJ1kSqg'; //avkolTestBot - 
 const bot = new TelegramBot(token, {polling: true});
 
 
-
+/**
 bot.onText(/\/start/, (msg) => {
 
 bot.sendMessage(msg.chat.id, "Welcome");
     
 });
+*/
 
 bot.on('message', (msg) =>{
 	
