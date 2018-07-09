@@ -11,6 +11,7 @@ const bot = new TelegramBot(token, {polling: true});
 bot.on('message', (msg) =>{
 	bot.sendMessage(msg.chat.id, `Здравствуйте, ${msg.from.first_name}! Вы написали мне "${msg.text.toString()}", но я не знаю, что это значит :(`)
 });
-
+/**
 http.createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
     res.end('');
+    */
