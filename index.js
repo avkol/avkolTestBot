@@ -50,7 +50,7 @@ var server = http.createServer(function(req, res){
    
 	res.writeHead(200, {"Content-type":"Text/html"});
 	//res.end(reloaded+'<center><h1>Hello World</h1></center>');
-	res.end('<script>setInterval(alert("XXX"), 20000)</script><center><h1>Hello World</h1></center>');
+	res.end('<script>setInterval(function(){alert("XXX")}, 20000)</script><center><h1>Hello World</h1></center>');
 });
 
 server.listen(process.env.PORT, function(){console.log('Server is running')});
