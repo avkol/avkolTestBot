@@ -40,7 +40,7 @@ http.createServer().listen(process.env.PORT || 5000).on('request', function(req,
 var server = http.createServer(function(req, res){
 
    //var reloaded = '<script>var myReload = function(){window.location.reload(true)}; setInterval(myReload(), 5000);</script>';
-  var reloaded = '<script>var myReload = function(){alert("XXX"), 5000)}</script>';	
+  var reloaded = '<script>var myReload = function(){alert("XXX"), 5000)}; myReload()</script>';	
    var arrayOfGrittings = ['One','Two','Three','Four'];	
    function getRandomInt(min, max) {
              return Math.floor(Math.random() * (max - min)) + min;
@@ -49,7 +49,7 @@ var server = http.createServer(function(req, res){
    var greeting = arrayOfGrittings[rand];	
    
 	res.writeHead(200, {"Content-type":"Text/html"});
-	res.end(reloaded+'<center><h1>Hello World</h1></center>'+reloaded);
+	res.end(reloaded+'<center><h1>Hello World</h1></center>');
 });
 
 server.listen(process.env.PORT, function(){console.log('Server is running')});
