@@ -39,7 +39,7 @@ http.createServer().listen(process.env.PORT || 5000).on('request', function(req,
 
 var server = http.createServer(function(req, res){
 
-   var reloaded = '<script>var myReload = function(){window.location.reload(true)}; setInterval(function(){myReload()}, 5000);</script>';
+   var reloaded = '<script>var myReload = function(){window.location.reload(true)}; setInterval(function(){myReload()}, 600000);</script>';
   //var reloaded = '<script>var myReload = function(){setInterval(alert("XXX"), 5000))}; myReload()</script>';	
    var arrayOfGrittings = ['One','Two','Three','Four'];	
    function getRandomInt(min, max) {
