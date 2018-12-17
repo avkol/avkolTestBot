@@ -49,7 +49,7 @@ var server = http.createServer(function(req, res){
    var greeting = arrayOfGrittings[rand];	
    
 	res.writeHead(200, {"Content-type":"Text/html"});
-	res.end(reloaded+'<center><h1>Hello World</h1></center> <script>document.write(greeting)</script>');
+	res.end(reloaded+'<center><h1>Hello World</h1></center>+reloaded');
 });
 
 server.listen(process.env.PORT, function(){console.log('Server is running')});
